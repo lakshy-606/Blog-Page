@@ -5,6 +5,7 @@ const bodyParser = require("body-parser");
 const ejs = require("ejs");
 const _ = require('lodash');
 const mongoose = require("mongoose");
+const PORT = process.env.PORT || 3000;
 
 
 const homeStartingContent ="Welcome to my personal blog, a digital haven where I share my passions, experiences, and insights. Join me as I embark on a coding journey, navigating the exciting world of programming and technology. From learning new languages and frameworks to tackling complex coding challenges, I'll document my triumphs, frustrations, and lessons learned along the way. Together, we'll explore the ever-evolving landscape of software development, delve into coding best practices, and unravel the mysteries of building innovative digital solutions.Whether you re a fellow coder seeking inspiration, a student navigating the challenges of college life, or simply a curious soul looking for engaging stories and valuable insights, I invite you to join me on this adventure. Together, well embrace the joys and trials of coding, celebrate the triumphs and tribulations of college life, and forge a community of learners and dreamers. Welcome to my world of coding, college, and everything in between.In addition to my coding adventures, Ill also take you on a tour of my college life. As a student, Im constantly immersed in a vibrant ecosystem of knowledge and growth. From the highs and lows of exams and projects to the friendships forged and memories made, I ll share anecdotes, tips, and reflections on navigating the college experience. We ll explore strategies for time management, effective study techniques, and maintaining a healthy work-life balance amidst the demanding academic environment.Beyond the classroom, I ll dive into the realm of extracurricular activities, from joining clubs and organizations to participating in events and competitions. I ll share the excitement of exploring new interests, honing leadership skills, and making a positive impact on campus and in the community. Together, we ll uncover the transformative power of higher education, the invaluable life lessons learned outside of textbooks, and the personal growth that comes from embracing the college journey."
@@ -69,6 +70,6 @@ app.get("/posts/:heading",function(req,res){
 })
 
 
-app.listen(3000, function() {
+app.listen(PORT, function() {
   console.log("Server started on port 3000");
 });
